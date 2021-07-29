@@ -32,7 +32,6 @@ def std_value(a):
     std = math.sqrt(vari)
     return std
 
-def find_list(a):
 
 
 
