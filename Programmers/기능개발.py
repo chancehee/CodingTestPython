@@ -33,9 +33,11 @@ progresses	speeds	return
 따라서 5일째에 1개의 기능, 10일째에 3개의 기능, 20일째에 2개의 기능이 배포됩니다.
 '''
 import math
-p = [95,90,99,99,80,99]
-s = [1,1,1,1,1,1]
+p = [93,30,55]
+s = [1,30,5]
 
+#내 풀이
+'''
 day = []
 for i in range(len(p)):
     x = math.ceil((100-p[i]) / s[i])
@@ -61,6 +63,21 @@ for i in range(1,len(day)):
     if i == len(day) - 1:
         result.append(cnt)
 print(result)
+'''
+
+
+#다른 사람 풀이
+q=[]
+
+for a,b in zip(p,s):
+    if len(q)==0 or q[-1][0] < -((a-100)//b):
+        q.append([-((a-100)//b),1])
+        
+    else:
+        q[-1][1] +=1
+
+for i in range(len(q)):
+    print(q[i][1])
 
 
 
