@@ -15,6 +15,7 @@
 첫째 줄에 그룹 단어의 개수를 출력한다.
 '''
 
+# 백준문제는 프린트로 제출 / 프로그래머스는 return으로 제출 
 n = int(input())
 words = []
 for i in range(n):
